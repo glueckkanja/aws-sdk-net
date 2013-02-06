@@ -1,0 +1,480 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D730418C-FFE2-45BE-9F1E-2CCAF7391636}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AWSSDK</RootNamespace>
+    <AssemblyName>AWSSDK</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\S3only\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\S3only\AWSSDK.xml</DocumentationFile>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <NoWarn>419,1591</NoWarn>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\S3only\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\S3only\AWSSDK.xml</DocumentationFile>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <DebugSymbols>false</DebugSymbols>
+    <NoWarn>419,1591</NoWarn>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Amazon.Auth\AccessControlPolicy\ActionIdentifier.cs" />
+    <Compile Include="Amazon.Auth\AccessControlPolicy\ActionIdentifiers\AutoScalingActionIdentifiers.cs" />
+    <Compile Include="Amazon.Auth\AccessControlPolicy\ActionIdentifiers\CloudFormationActionIdentifiers.cs" />
+    <Compile Include="Amazon.Auth\AccessControlPolicy\ActionIdentifiers\CloudFrontActionIdentifiers.cs" />
+    <Compile Include="Amazon.Auth\AccessControlPolicy\ActionIdentifiers\CloudWatchActionIdentifiers.cs" />
+    <Compile Include="Amazon.Auth\AccessControlPolicy\ActionIdentifiers\DynamoDBActionIdentifiers.cs" />
+    <Compile Include="Amazon.Auth\AccessControlPolicy\ActionIdentifiers\EC2ActionIdentifiers.cs" />
+    <Compile Include="Amazon.Auth\AccessControlPolicy\ActionIdentifiers\ElastiCacheActionIdentifiers.cs" />
+    <Compile Include="Amazon.Auth\AccessControlPolicy\ActionIdentifiers\ElasticBeanstalkActionIdentifiers.cs" />
+    <Compile Include="Amazon.Auth\AccessControlPolicy\ActionIdentifiers\ElasticLoadBalancingActionIdentifiers.cs" />
+    <Compile Include="Amazon.Auth\AccessControlPolicy\ActionIdentifiers\ElasticMapReduceActionIdentifiers.cs" />
+    <Compile Include="Amazon.Auth\AccessControlPolicy\ActionIdentifiers\IdentityandAccessManagementActionIdentifiers.cs" />
+    <Compile Include="Amazon.Auth\AccessControlPolicy\ActionIdentifiers\RDSActionIdentifiers.cs" />
+    <Compile Include="Amazon.Auth\AccessControlPolicy\ActionIdentifiers\Route53ActionIdentifiers.cs" />
+    <Compile Include="Amazon.Auth\AccessControlPolicy\ActionIdentifiers\SecurityTokenServiceActionIdentifiers.cs" />
+    <Compile Include="Amazon.Auth\AccessControlPolicy\ActionIdentifiers\SESActionIdentifiers.cs" />
+    <Compile Include="Amazon.Auth\AccessControlPolicy\ActionIdentifiers\SimpleDBActionIdentifiers.cs" />
+    <Compile Include="Amazon.Auth\AccessControlPolicy\Internal\JsonDocumentFields.cs" />
+    <Compile Include="Amazon.Auth\AccessControlPolicy\Internal\JsonPolicyReader.cs" />
+    <Compile Include="Amazon.Auth\AccessControlPolicy\Internal\JsonPolicyWriter.cs" />
+    <Compile Include="Amazon.Auth\AccessControlPolicy\ActionIdentifiers\S3ActionIdentifiers.cs" />
+    <Compile Include="Amazon.Auth\AccessControlPolicy\ActionIdentifiers\SNSActionIdentifiers.cs" />
+    <Compile Include="Amazon.Auth\AccessControlPolicy\ActionIdentifiers\SQSActionIdentifiers.cs" />
+    <Compile Include="Amazon.Auth\AccessControlPolicy\Condition.cs" />
+    <Compile Include="Amazon.Auth\AccessControlPolicy\ConditionFactory.cs" />
+    <Compile Include="Amazon.Auth\AccessControlPolicy\ConditionFactory.S3.cs" />
+    <Compile Include="Amazon.Auth\AccessControlPolicy\ConditionFactory.SNS.cs" />
+    <Compile Include="Amazon.Auth\AccessControlPolicy\Policy.cs" />
+    <Compile Include="Amazon.Auth\AccessControlPolicy\Principal.cs" />
+    <Compile Include="Amazon.Auth\AccessControlPolicy\Resource.cs" />
+    <Compile Include="Amazon.Auth\AccessControlPolicy\ResourceFactory.cs" />
+    <Compile Include="Amazon.Auth\AccessControlPolicy\Statement.cs" />
+    <Compile Include="Amazon.Runtime\AmazonClientException.cs" />
+    <Compile Include="Amazon.Runtime\AmazonServiceException.cs" />
+    <Compile Include="Amazon.Runtime\AmazonUnmarshallingException.cs" />
+    <Compile Include="Amazon.Runtime\AmazonWebServiceClient.cs" />
+    <Compile Include="Amazon.Runtime\AmazonWebServiceRequest.cs" />
+    <Compile Include="Amazon.Runtime\AmazonWebServiceResponse.cs" />
+    <Compile Include="Amazon.Runtime\AWSCredentials.cs" />
+    <Compile Include="Amazon.Runtime\ClientConfig.cs" />
+    <Compile Include="Amazon.Runtime\Enumerations.cs" />
+    <Compile Include="Amazon.Runtime\ExceptionHandler.cs" />
+    <Compile Include="Amazon.Runtime\Internal\AmazonWebServiceRequest.cs" />
+    <Compile Include="Amazon.Runtime\Internal\AsyncResult.cs" />
+    <Compile Include="Amazon.Runtime\Internal\Auth\AbstractAWSSigner.cs" />
+    <Compile Include="Amazon.Runtime\Internal\Auth\AWS3Signer.cs" />
+    <Compile Include="Amazon.Runtime\Internal\Auth\AWS4Signer.cs" />
+    <Compile Include="Amazon.Runtime\Internal\Auth\CloudFrontSigner.cs" />
+    <Compile Include="Amazon.Runtime\Internal\Auth\QueryStringSigner.cs" />
+    <Compile Include="Amazon.Runtime\Internal\Auth\SignatureException.cs" />
+    <Compile Include="Amazon.Runtime\Internal\DefaultRequest.cs" />
+    <Compile Include="Amazon.Runtime\Internal\ErrorResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Amazon.Runtime\Internal\IRequest.cs" />
+    <Compile Include="Amazon.Runtime\Internal\IRequestEvents.cs" />
+    <Compile Include="Amazon.Runtime\Internal\RequestMetrics.cs" />
+    <Compile Include="Amazon.Runtime\Internal\Transform\ErrorResponseUnmarshaller.cs" />
+    <Compile Include="Amazon.Runtime\Internal\Transform\IMarshaller.cs" />
+    <Compile Include="Amazon.Runtime\Internal\Transform\IResponseUnmarshaller.cs" />
+    <Compile Include="Amazon.Runtime\Internal\Transform\IUnmarshaller.cs" />
+    <Compile Include="Amazon.Runtime\Internal\Transform\JsonErrorResponseUnmarshaller.cs" />
+    <Compile Include="Amazon.Runtime\Internal\Transform\JsonUnmarshallerContext.cs" />
+    <Compile Include="Amazon.Runtime\Internal\Transform\ResponseUnmarshallers.cs" />
+    <Compile Include="Amazon.Runtime\Internal\Transform\SimpleTypeUnmarhaller.cs" />
+    <Compile Include="Amazon.Runtime\Internal\Transform\UnmarshallerContext.cs" />
+    <Compile Include="Amazon.Runtime\Internal\Util\Hashing.cs" />
+    <Compile Include="Amazon.Runtime\Internal\Util\Logger.cs" />
+    <Compile Include="Amazon.Runtime\Internal\Util\StringUtils.cs" />
+    <Compile Include="Amazon.Runtime\RequestHandler.cs" />
+    <Compile Include="Amazon.Runtime\ResponseHandler.cs" />
+    <Compile Include="Amazon.Runtime\ResponseMetadata.cs" />
+    <Compile Include="Amazon.Runtime\SignatureException.cs" />
+    <Compile Include="Amazon.Runtime\StreamUploadProgressArgs.cs" />
+    <Compile Include="Amazon.S3\AmazonS3.cs" />
+    <Compile Include="Amazon.S3\AmazonS3Client.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Amazon.S3\AmazonS3Config.cs" />
+    <Compile Include="Amazon.S3\AmazonS3Exception.cs" />
+    <Compile Include="Amazon.S3\Internal\IS3RequestEvents.cs" />
+    <Compile Include="Amazon.S3\IO\S3DirectoryInfo.cs" />
+    <Compile Include="Amazon.S3\IO\S3FileInfo.cs" />
+    <Compile Include="Amazon.S3\IO\S3FileStream.cs" />
+    <Compile Include="Amazon.S3\IO\S3FileSystemInfo.cs" />
+    <Compile Include="Amazon.S3\IO\S3Helper.cs" />
+    <Compile Include="Amazon.S3\Model\AbortMultipartUploadRequest.cs" />
+    <Compile Include="Amazon.S3\Model\AbortMultipartUploadResponse.cs" />
+    <Compile Include="Amazon.S3\Model\CompleteMultipartUploadRequest.cs" />
+    <Compile Include="Amazon.S3\Model\CompleteMultipartUploadResponse.cs" />
+    <Compile Include="Amazon.S3\Model\CopyPartRequest.cs" />
+    <Compile Include="Amazon.S3\Model\CopyPartResponse.cs" />
+    <Compile Include="Amazon.S3\Model\CORSConfiguration.cs" />
+    <Compile Include="Amazon.S3\Model\CORSRule.cs" />
+    <Compile Include="Amazon.S3\Model\DeleteBucketPolicyRequest.cs" />
+    <Compile Include="Amazon.S3\Model\DeleteBucketPolicyResponse.cs" />
+    <Compile Include="Amazon.S3\Model\DeleteBucketTaggingRequest.cs" />
+    <Compile Include="Amazon.S3\Model\DeleteBucketTaggingResponse.cs" />
+    <Compile Include="Amazon.S3\Model\DeleteBucketWebsiteRequest.cs" />
+    <Compile Include="Amazon.S3\Model\DeleteBucketWebsiteResponse.cs" />
+    <Compile Include="Amazon.S3\Model\DeleteCORSConfigurationRequest.cs" />
+    <Compile Include="Amazon.S3\Model\DeleteCORSConfigurationResponse.cs" />
+    <Compile Include="Amazon.S3\Model\DeletedObject.cs" />
+    <Compile Include="Amazon.S3\Model\DeleteError.cs" />
+    <Compile Include="Amazon.S3\Model\DeleteLifecycleConfigurationRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Amazon.S3\Model\DeleteLifecycleConfigurationResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Amazon.S3\Model\DeleteObjectsException.cs" />
+    <Compile Include="Amazon.S3\Model\DeleteObjectsRequest.cs" />
+    <Compile Include="Amazon.S3\Model\DeleteObjectsResponse.cs" />
+    <Compile Include="Amazon.S3\Model\Expiration.cs" />
+    <Compile Include="Amazon.S3\Model\GetBucketPolicyRequest.cs" />
+    <Compile Include="Amazon.S3\Model\GetBucketPolicyResponse.cs" />
+    <Compile Include="Amazon.S3\Model\GetBucketTaggingRequest.cs" />
+    <Compile Include="Amazon.S3\Model\GetBucketTaggingResponse.cs" />
+    <Compile Include="Amazon.S3\Model\GetBucketVersioningRequest.cs" />
+    <Compile Include="Amazon.S3\Model\GetBucketVersioningResponse.cs" />
+    <Compile Include="Amazon.S3\Model\GetBucketWebsiteRequest.cs" />
+    <Compile Include="Amazon.S3\Model\GetBucketWebsiteResponse.cs" />
+    <Compile Include="Amazon.S3\Model\GetCORSConfigurationRequest.cs" />
+    <Compile Include="Amazon.S3\Model\GetCORSConfigurationResponse.cs" />
+    <Compile Include="Amazon.S3\Model\GetLifecycleConfigurationRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Amazon.S3\Model\GetLifecycleConfigurationResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Amazon.S3\Model\GetNotificationConfigurationRequest.cs" />
+    <Compile Include="Amazon.S3\Model\GetNotificationConfigurationResponse.cs" />
+    <Compile Include="Amazon.S3\Model\GetPreSignedUrlRequest.cs" />
+    <Compile Include="Amazon.S3\Model\InitiateMultipartUploadRequest.cs" />
+    <Compile Include="Amazon.S3\Model\InitiateMultipartUploadResponse.cs" />
+    <Compile Include="Amazon.S3\Model\KeyVersion.cs" />
+    <Compile Include="Amazon.S3\Model\LifecycleConfiguration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Amazon.S3\Model\LifecycleRule.cs" />
+    <Compile Include="Amazon.S3\Model\LifecycleRuleExpiration.cs" />
+    <Compile Include="Amazon.S3\Model\LifecycleTransition.cs" />
+    <Compile Include="Amazon.S3\Model\ListMultipartUploadsRequest.cs" />
+    <Compile Include="Amazon.S3\Model\ListMultipartUploadsResponse.cs" />
+    <Compile Include="Amazon.S3\Model\ListPartsRequest.cs" />
+    <Compile Include="Amazon.S3\Model\ListPartsResponse.cs" />
+    <Compile Include="Amazon.S3\Model\ListVersionsRequest.cs" />
+    <Compile Include="Amazon.S3\Model\ListVersionsResponse.cs" />
+    <Compile Include="Amazon.S3\Model\MultiPartUpload.cs" />
+    <Compile Include="Amazon.S3\Model\NotificationConfigurationList.cs" />
+    <Compile Include="Amazon.S3\Model\PartDetail.cs" />
+    <Compile Include="Amazon.S3\Model\PartEtag.cs" />
+    <Compile Include="Amazon.S3\Model\PutBucketTaggingRequest.cs" />
+    <Compile Include="Amazon.S3\Model\PutBucketTaggingResponse.cs" />
+    <Compile Include="Amazon.S3\Model\RestoreObjectRequest.cs" />
+    <Compile Include="Amazon.S3\Model\RestoreObjectResponse.cs" />
+    <Compile Include="Amazon.S3\Model\RoutingRule.cs" />
+    <Compile Include="Amazon.S3\Model\RoutingRuleCondition.cs" />
+    <Compile Include="Amazon.S3\Model\RoutingRuleRedirect.cs" />
+    <Compile Include="Amazon.S3\Model\Tag.cs" />
+    <Compile Include="Amazon.S3\Model\TagSet.cs" />
+    <Compile Include="Amazon.S3\Model\PutCORSConfigurationRequest.cs" />
+    <Compile Include="Amazon.S3\Model\PutCORSConfigurationResponse.cs" />
+    <Compile Include="Amazon.SecurityToken\Model\AssumedRoleUser.cs" />
+    <Compile Include="Amazon.SecurityToken\Model\AssumeRoleRequest.cs" />
+    <Compile Include="Amazon.SecurityToken\Model\AssumeRoleResponse.cs" />
+    <Compile Include="Amazon.SecurityToken\Model\AssumeRoleResult.cs" />
+    <Compile Include="Amazon.SecurityToken\Model\Internal\MarshallTransformations\AssumedRoleUserUnmarshaller.cs" />
+    <Compile Include="Amazon.SecurityToken\Model\Internal\MarshallTransformations\AssumeRoleRequestMarshaller.cs" />
+    <Compile Include="Amazon.SecurityToken\Model\Internal\MarshallTransformations\AssumeRoleResponseUnmarshaller.cs" />
+    <Compile Include="Amazon.SecurityToken\Model\Internal\MarshallTransformations\AssumeRoleResultUnmarshaller.cs" />
+    <Compile Include="Amazon.Util\PartStreamWrapper.cs" />
+    <Compile Include="Amazon.S3\Model\PutBucketPolicyRequest.cs" />
+    <Compile Include="Amazon.S3\Model\PutBucketPolicyResponse.cs" />
+    <Compile Include="Amazon.S3\Model\PutBucketWebsiteRequest.cs" />
+    <Compile Include="Amazon.S3\Model\PutBucketWebsiteResponse.cs" />
+    <Compile Include="Amazon.S3\Model\PutLifecycleConfigurationRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Amazon.S3\Model\PutLifecycleConfigurationResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Amazon.S3\Model\ResponseHeaderOverrides.cs" />
+    <Compile Include="Amazon.S3\Model\S3AccessControlList.cs" />
+    <Compile Include="Amazon.S3\Model\S3Bucket.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Amazon.S3\Model\S3BucketLoggingConfig.cs" />
+    <Compile Include="Amazon.S3\Model\DeleteObjectRequest.cs" />
+    <Compile Include="Amazon.S3\Model\DeleteObjectResponse.cs" />
+    <Compile Include="Amazon.S3\Model\DisableBucketLoggingResponse.cs" />
+    <Compile Include="Amazon.S3\Model\EnableBucketLoggingRequest.cs" />
+    <Compile Include="Amazon.S3\Model\S3Error.cs" />
+    <Compile Include="Amazon.S3\Model\GetBucketLoggingRequest.cs" />
+    <Compile Include="Amazon.S3\Model\GetBucketLoggingResponse.cs" />
+    <Compile Include="Amazon.S3\Model\DisableBucketLoggingRequest.cs" />
+    <Compile Include="Amazon.S3\Model\EnableBucketLoggingResponse.cs" />
+    <Compile Include="Amazon.S3\Model\S3ObjectVersion.cs" />
+    <Compile Include="Amazon.S3\Model\S3BucketVersioningConfig.cs" />
+    <Compile Include="Amazon.S3\Model\S3PutWithACLRequest.cs" />
+    <Compile Include="Amazon.S3\Model\SetBucketVersioningRequest.cs" />
+    <Compile Include="Amazon.S3\Model\SetBucketVersioningResponse.cs" />
+    <Compile Include="Amazon.S3\Model\SetNotificationConfigurationRequest.cs" />
+    <Compile Include="Amazon.S3\Model\SetNotificationConfigurationResponse.cs" />
+    <Compile Include="Amazon.S3\Model\TopicConfiguration.cs" />
+    <Compile Include="Amazon.S3\Model\TransferProgressArgs.cs" />
+    <Compile Include="Amazon.S3\Model\Tuple.cs" />
+    <Compile Include="Amazon.S3\Model\S3Enumerations.cs" />
+    <Compile Include="Amazon.S3\Model\CopyObjectRequest.cs" />
+    <Compile Include="Amazon.S3\Model\CopyObjectResponse.cs" />
+    <Compile Include="Amazon.S3\Model\DeleteBucketRequest.cs" />
+    <Compile Include="Amazon.S3\Model\DeleteBucketResponse.cs" />
+    <Compile Include="Amazon.S3\Model\GetACLRequest.cs" />
+    <Compile Include="Amazon.S3\Model\GetACLResponse.cs" />
+    <Compile Include="Amazon.S3\Model\GetBucketLocationRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Amazon.S3\Model\GetBucketLocationResponse.cs" />
+    <Compile Include="Amazon.S3\Model\GetObjectMetadataRequest.cs" />
+    <Compile Include="Amazon.S3\Model\GetObjectMetadataResponse.cs" />
+    <Compile Include="Amazon.S3\Model\GetObjectRequest.cs" />
+    <Compile Include="Amazon.S3\Model\GetObjectResponse.cs" />
+    <Compile Include="Amazon.S3\Model\S3Grant.cs" />
+    <Compile Include="Amazon.S3\Model\S3Grantee.cs" />
+    <Compile Include="Amazon.S3\Model\ListObjectsRequest.cs" />
+    <Compile Include="Amazon.S3\Model\ListBucketsRequest.cs" />
+    <Compile Include="Amazon.S3\Model\ListBucketsResponse.cs" />
+    <Compile Include="Amazon.S3\Model\ListObjectsResponse.cs" />
+    <Compile Include="Amazon.S3\Model\Owner.cs" />
+    <Compile Include="Amazon.S3\Model\PutBucketRequest.cs" />
+    <Compile Include="Amazon.S3\Model\PutBucketResponse.cs" />
+    <Compile Include="Amazon.S3\Model\PutObjectRequest.cs" />
+    <Compile Include="Amazon.S3\Model\PutObjectResponse.cs" />
+    <Compile Include="Amazon.S3\Model\S3Object.cs" />
+    <Compile Include="Amazon.S3\Model\S3Response.cs" />
+    <Compile Include="Amazon.S3\Model\UploadPartRequest.cs" />
+    <Compile Include="Amazon.S3\Model\UploadPartResponse.cs" />
+    <Compile Include="Amazon.S3\Model\WebsiteConfiguration.cs" />
+    <Compile Include="Amazon.S3\Transfer\BaseDownloadRequest.cs" />
+    <Compile Include="Amazon.S3\Transfer\Internal\AbortMultipartUploadsCommand.cs" />
+    <Compile Include="Amazon.S3\Transfer\Internal\BaseCommand.cs" />
+    <Compile Include="Amazon.S3\Transfer\Internal\DownloadCommand.cs" />
+    <Compile Include="Amazon.S3\Transfer\Internal\DownloadDirectoryCommand.cs" />
+    <Compile Include="Amazon.S3\Transfer\Internal\Executer.cs" />
+    <Compile Include="Amazon.S3\Transfer\Internal\MultipartUploadCommand.cs" />
+    <Compile Include="Amazon.S3\Transfer\Internal\OpenStreamCommand.cs" />
+    <Compile Include="Amazon.S3\Transfer\Internal\SimpleUploadCommand.cs" />
+    <Compile Include="Amazon.S3\Transfer\Internal\TransferAsyncResult.cs" />
+    <Compile Include="Amazon.S3\Transfer\Internal\UploadDirectoryCommand.cs" />
+    <Compile Include="Amazon.S3\Transfer\TransferUtility.cs" />
+    <Compile Include="Amazon.S3\Transfer\TransferUtilityConfig.cs" />
+    <Compile Include="Amazon.S3\Transfer\TransferUtilityDownloadDirectoryRequest.cs" />
+    <Compile Include="Amazon.S3\Transfer\TransferUtilityDownloadRequest.cs" />
+    <Compile Include="Amazon.S3\Transfer\TransferUtilityOpenStreamRequest.cs" />
+    <Compile Include="Amazon.S3\Transfer\TransferUtilityUploadDirectoryRequest.cs" />
+    <Compile Include="Amazon.S3\Transfer\TransferUtilityUploadRequest.cs" />
+    <Compile Include="Amazon.S3\Util\S3Constants.cs" />
+    <Compile Include="Amazon.S3\Util\AmazonS3Util.cs" />
+    <Compile Include="Amazon.S3\Model\S3Request.cs" />
+    <Compile Include="Amazon.S3\Model\SetACLRequest.cs" />
+    <Compile Include="Amazon.S3\Model\SetACLResponse.cs" />
+    <Compile Include="Amazon.SecurityToken\AmazonSecurityTokenService.cs" />
+    <Compile Include="Amazon.SecurityToken\AmazonSecurityTokenServiceClient.cs" />
+    <Compile Include="Amazon.SecurityToken\AmazonSecurityTokenServiceConfig.cs" />
+    <Compile Include="Amazon.SecurityToken\AmazonSecurityTokenServiceException.cs" />
+    <Compile Include="Amazon.SecurityToken\Model\Credentials.cs" />
+    <Compile Include="Amazon.SecurityToken\Model\FederatedUser.cs" />
+    <Compile Include="Amazon.SecurityToken\Model\GetFederationTokenRequest.cs" />
+    <Compile Include="Amazon.SecurityToken\Model\GetFederationTokenResponse.cs" />
+    <Compile Include="Amazon.SecurityToken\Model\GetFederationTokenResult.cs" />
+    <Compile Include="Amazon.SecurityToken\Model\GetSessionTokenRequest.cs" />
+    <Compile Include="Amazon.SecurityToken\Model\GetSessionTokenResponse.cs" />
+    <Compile Include="Amazon.SecurityToken\Model\GetSessionTokenResult.cs" />
+    <Compile Include="Amazon.SecurityToken\Model\Internal\MarshallTransformations\CredentialsUnmarshaller.cs" />
+    <Compile Include="Amazon.SecurityToken\Model\Internal\MarshallTransformations\FederatedUserUnmarshaller.cs" />
+    <Compile Include="Amazon.SecurityToken\Model\Internal\MarshallTransformations\GetFederationTokenRequestMarshaller.cs" />
+    <Compile Include="Amazon.SecurityToken\Model\Internal\MarshallTransformations\GetFederationTokenResponseUnmarshaller.cs" />
+    <Compile Include="Amazon.SecurityToken\Model\Internal\MarshallTransformations\GetFederationTokenResultUnmarshaller.cs" />
+    <Compile Include="Amazon.SecurityToken\Model\Internal\MarshallTransformations\GetSessionTokenRequestMarshaller.cs" />
+    <Compile Include="Amazon.SecurityToken\Model\Internal\MarshallTransformations\GetSessionTokenResponseUnmarshaller.cs" />
+    <Compile Include="Amazon.SecurityToken\Model\Internal\MarshallTransformations\GetSessionTokenResultUnmarshaller.cs" />
+    <Compile Include="Amazon.SecurityToken\Model\MalformedPolicyDocumentException.cs" />
+    <Compile Include="Amazon.SecurityToken\Model\PackedPolicyTooLargeException.cs" />
+    <Compile Include="Amazon.Util\PaginatedResource.cs" />
+    <Compile Include="Amazon.Util\PaginatedResourceFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Amazon.Util\AWSSDKUtils.cs" />
+    <Compile Include="RegionEndpoint.cs" />
+    <Compile Include="ThirdParty\Ionic.Zlib\Crc32.cs" />
+    <Compile Include="ThirdParty\Json\IJsonWrapper.cs" />
+    <Compile Include="ThirdParty\Json\JsonData.cs" />
+    <Compile Include="ThirdParty\Json\JsonException.cs" />
+    <Compile Include="ThirdParty\Json\JsonMapper.cs" />
+    <Compile Include="ThirdParty\Json\JsonReader.cs" />
+    <Compile Include="ThirdParty\Json\JsonWriter.cs" />
+    <Compile Include="ThirdParty\Json\Lexer.cs" />
+    <Compile Include="ThirdParty\Json\ParserToken.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Amazon.S3\Model\ListBucketsResponse.xslt" />
+    <EmbeddedResource Include="Amazon.S3\Model\GetBucketLocationResponse.xslt" />
+    <EmbeddedResource Include="Amazon.S3\Model\GetACLResponse.xslt" />
+    <EmbeddedResource Include="Amazon.S3\Model\S3ErrorResponse.xslt" />
+    <EmbeddedResource Include="Amazon.S3\Model\GetBucketLoggingResponse.xslt" />
+    <EmbeddedResource Include="Amazon.S3\Model\CopyObjectResponse.xslt" />
+    <EmbeddedResource Include="Amazon.S3\Model\ListObjectsResponse.xslt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Amazon.S3\Model\GetBucketVersioningResponse.xslt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Amazon.S3\Model\ListVersionsResponse.xslt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Amazon.S3\Model\GetNotificationConfigurationResponse.xslt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Amazon.S3\Model\CompleteMultipartUploadResponse.xslt" />
+    <EmbeddedResource Include="Amazon.S3\Model\InitiateMultipartUploadResponse.xslt" />
+    <EmbeddedResource Include="Amazon.S3\Model\ListMultipartUploadsResponse.xslt" />
+    <EmbeddedResource Include="Amazon.S3\Model\ListPartsResponse.xslt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Amazon.S3\Model\GetBucketWebsiteResponse.xslt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Amazon.S3\Model\CopyPartResponse.xslt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Amazon.S3\Model\DeleteObjectsResponse.xslt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Amazon.S3\Model\GetLifecycleConfigurationResponse.xslt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Amazon.S3\Model\GetBucketTaggingResponse.xslt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="endpoints.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Amazon.S3\Model\GetCORSConfigurationResponse.xslt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

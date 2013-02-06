@@ -1,9 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWSSDKSrc", "AWSSDK\AWSSDKSrc.csproj", "{40E91E2D-70F3-463D-9E3E-408AE2A70BA8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWS.Extensions", "AWS.Extensions\AWS.Extensions.csproj", "{DB8610E1-5784-480E-9072-E785E362D8D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWSSDKSrc-S3only", "AWSSDK\AWSSDKSrc-S3only.csproj", "{D730418C-FFE2-45BE-9F1E-2CCAF7391636}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,6 +21,10 @@ Global
 		{DB8610E1-5784-480E-9072-E785E362D8D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB8610E1-5784-480E-9072-E785E362D8D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB8610E1-5784-480E-9072-E785E362D8D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D730418C-FFE2-45BE-9F1E-2CCAF7391636}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D730418C-FFE2-45BE-9F1E-2CCAF7391636}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D730418C-FFE2-45BE-9F1E-2CCAF7391636}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D730418C-FFE2-45BE-9F1E-2CCAF7391636}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
